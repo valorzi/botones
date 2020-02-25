@@ -1,0 +1,247 @@
+/*_______________________ Fuentes __________________*/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/*_________________ Estilos Globales ________________*/
+body{
+	font:15px  arial,helvetica, sans serif;
+	padding: 0;
+	margin:0;
+	background-color: #f4f4f4;
+}/*
+.contenedor{
+width: 80%;
+margin:auto;
+overflow: hidden;
+}*/
+ul{
+	margin:0;
+	padding: 0;
+}
+p {
+    padding: 0;
+    margin: 0 0 0px 0;
+  }
+  
+  h1,h2, h3, h4, h5, h6 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 200;
+    margin: 0 0 0 0;
+    padding: 0;
+    text-align: center;
+  }
+  h2{
+    text-align: right;
+  }
+/* _______________ Encabezado ______________________*/
+header{
+	background-color:black;
+	color:#ffffff;
+	padding-top: 2px;
+	min-height: 10px;
+    position:relative;/*fixed=fija. relative=movil.*/
+    width: 100%;   
+    opacity: 0.9;
+    filter: alpha(opacity=80);
+    z-index: 999;
+}
+header nav{
+	float:right;
+	margin-top:10px;
+}
+header li{
+	float:left;
+	display:inline;
+	padding:0 20px 0 20px;
+}
+header a{
+	color:#fff;
+	text-decoration: none;
+	text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Abril Fatface', cursive;
+}
+header .resaltado, header .actual a{
+	color: blueviolet;
+	font-weight: bold;
+}
+/* __________________________ Pie de Página __________*/
+footer{
+  padding: 20px;
+  position:fixed;
+	margin-top: 20px;
+	color:#fff;
+	background-color:black;
+	text-align: center;
+} 
+/* _________________________ Secciones __________________ */
+  #preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff url("img/mural.svg") no-repeat center center;
+  }
+  #presentacion {
+    display: flex;   /*Para alinear el contenido*/
+      justify-content: center;  /*Horizontal*/
+      align-items: center ;  /*Vertical*/
+    position: fixed;      /*Para cubrir todo*/
+      width: 100%;
+      height: 100%;
+    overflow: hidden;
+    z-index: 998;
+    background: #fff url("img/mural.jpg") no-repeat center center;
+  }
+  /*-------------------------*/
+  .divEqui{
+     display: flex;
+     justify-content:space-around;  /*Horizontal*/
+     overflow: hidden;
+     padding:10px 5px 2px 5px;
+     background:black;
+   }
+   .divEquiCelda{
+    background-color:darkgray;
+   border-right: 5px solid white;
+
+   }
+  .divPila{
+      display: flex;
+      justify-content: space-around; 
+      flex-direction: column; /*Vertical*/
+    }
+    /*----------------------*/
+    .divTabla{
+      display: table;
+      /*caption-side: bottom;*/
+      overflow: hidden;
+      padding:10px 5px 2px 5px;
+
+    }
+    .divTablaCaption{
+      display:table-caption;
+    }
+    .divFila{
+      display: table-row;
+    }
+    .divCol{
+      display: table-cell;
+      height: 100%;
+      width: 30%;
+     
+      border-right: 5px solid white;
+      background-color:darkgrey;     
+      padding: 5px 5px 5px 5px; 
+    }
+    .divCol1{
+      display: table-cell;
+      height: 100%;
+      width: 10%;
+      flex-grow: 1;    
+      padding: 5px 5px 5px 5px; 
+    }
+    .divCol2{
+      display: table-cell;
+      width: 90%;
+      height: 100%;
+      padding: 5px 5px 5px 5px; 
+    }
+    .divCol3{
+      display: table-cell;
+      flex-grow: 1;
+      width: 10%;
+      height: 100%;
+      border-right: 5px solid white;
+    
+      padding: 5px 5px 5px 5px; 
+    }
+    /*----------------------*/
+  .grid-container {
+    display:flex;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+        grid-gap: 20px;
+        background-color:black;
+        padding: 10px 10px 10px 10px;
+  }
+    /*.grid-container>div*/
+    .grid-item {
+    grid-column: span 2;
+        padding:  0;
+        font-size: 14px;
+        align-items: center;
+    }
+    .grid-item:hover{
+      cursor: pointer;
+    }
+    /* ______________ IE _______________________________________*/
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .grid-container {
+       display: flex;
+       padding: 10px 10px 10px 10px; 
+       display: -ms-flexbox;
+       justify-content: space-around; 
+       height: 100%;
+       -ms-flex-direction: row;
+       flex-direction: row;
+       -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+        -ms-flex-pack: justify;
+       -ms-flex-line-pack: stretch;
+       align-content: stretch;
+       -ms-flex-align: center;
+       align-items: center;
+      }  
+      .grid-item {
+        padding:  10px 0;
+        border-bottom: 2.5px solid black;
+        border-top: 2.5px solid black;
+        font-size: 14px;
+        -ms-flex-item-align: stretch;
+        border-radius:16px;  
+         max-width: 33%;                      
+       }
+   }
+    
+/* _____________ Selectores de Clase ______________________*/
+   
+    .muralImg{
+        cursor: pointer;
+    }
+    .cuadro{
+       cursor:pointer;
+       width: 90%;
+       height: 90%;
+       background:transparent url(img/Ripple-200.svg) center no-repeat;
+    }
+    .txtCuadro{
+        display:none;
+        font-size: 1rem;
+        background-color: palegoldenrod;
+        font-family: 'Abril Fatface', cursive;
+        text-align: center;
+    }
+    .cubrir{
+      background-color: #1c2833;
+      padding: 150px;
+    }
+    .css0{
+      font-weight: bold; font-family: "Ubuntu", sans-serif;
+      color:lightskyblue;}
+    .html0{
+       font-weight: bold;font-family: "Ubuntu", sans-serif;
+       color:lightsalmon;
+      }
+    .css1{ 
+        font-family: "Ubuntu", sans-serif;
+        color:darkslateblue;
+    }
+      
+    .html1{
+      font-family: "Ubuntu", sans-serif;
+      color:darkgoldenrod;
+      width: 50%;
+    }
